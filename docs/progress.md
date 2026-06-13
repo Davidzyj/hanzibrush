@@ -68,4 +68,4 @@ Bundle ID：com.zhouyajie.hanzibrush
 - 真机或模拟器手动走查。
 - 用户确认是否现在创建 GitHub 远程仓库并部署 Pages。
 - Apple Developer 团队签名配置完成后，运行 generic iOS Release/archive。
-- 最后阶段生成 App Store 截图。
+- 最后阶段生成 App Store 截图。已生成英语 iPhone 17 Pro Max 截图，路径为 `screenshots/iphone-17-pro-max/en/`，contact sheet 为 `build/screenshot-previews/contact-sheet.jpg`。

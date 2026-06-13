@@ -17,6 +17,7 @@
 - iPhone 17 模拟器安装并启动 `com.zhouyajie.hanzibrush` 成功。
 - `xcodebuild -project HanziBrush.xcodeproj -scheme HanziBrush -configuration Release -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.2' -derivedDataPath build/DerivedDataReleaseSim build` 通过。
 - `scripts/preflight_release_check.sh` 通过。
+- `scripts/capture_screenshots.sh` 已生成真实 iPhone 17 Pro Max 模拟器截图，尺寸为 1320x2868。
 
 ## 今日闭环
 

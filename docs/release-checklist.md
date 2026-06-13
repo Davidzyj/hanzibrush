@@ -10,6 +10,8 @@
   `xcodebuild -project HanziBrush.xcodeproj -scheme HanziBrush -configuration Release -destination 'generic/platform=iOS' -derivedDataPath build/DerivedDataRelease build`
 - 运行发版前校验：
   `scripts/preflight_release_check.sh`
+- 生成截图：
+  `scripts/capture_screenshots.sh`
 - 确认 1024 图标没有 alpha：
   `python3 -c "from PIL import Image; im=Image.open('HanziBrush/Resources/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png'); print(im.mode, im.size)"`
 
