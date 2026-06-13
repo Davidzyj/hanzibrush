@@ -24,10 +24,10 @@ Keywords:
 hanzi, chinese, calligraphy, brush, mandarin, culture, writing, characters, chinese art, language
 
 Support URL:
-https://zhouyajie.github.io/hanzibrush/support/
+https://davidzyj.github.io/hanzibrush/support/
 
 Privacy Policy URL:
-https://zhouyajie.github.io/hanzibrush/privacy/
+https://davidzyj.github.io/hanzibrush/privacy/
 
 Copyright:
 2026 Zhou Yajie
@@ -65,10 +65,10 @@ App 名称：墨韵汉字
 汉字,中文,书法,临摹,中国文化,毛笔,学习,汉语,字帖,作品
 
 支持 URL：
-https://zhouyajie.github.io/hanzibrush/support/
+https://davidzyj.github.io/hanzibrush/support/
 
 隐私政策 URL：
-https://zhouyajie.github.io/hanzibrush/privacy/
+https://davidzyj.github.io/hanzibrush/privacy/
 
 版权：
 2026 Zhou Yajie

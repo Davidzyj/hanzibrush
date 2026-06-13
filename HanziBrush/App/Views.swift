@@ -619,12 +619,12 @@ struct SettingsView: View {
                         }
                     }
 
-                    SettingsLinkRow(systemImage: "lock.shield.fill", title: store.text("settings.privacy"), subtitle: "zhouyajie.github.io/hanzibrush/privacy") {
-                        openURL("https://zhouyajie.github.io/hanzibrush/privacy/")
+                    SettingsLinkRow(systemImage: "lock.shield.fill", title: store.text("settings.privacy"), subtitle: "davidzyj.github.io/hanzibrush/privacy") {
+                        openURL("https://davidzyj.github.io/hanzibrush/privacy/")
                     }
 
-                    SettingsLinkRow(systemImage: "questionmark.circle.fill", title: store.text("settings.support"), subtitle: "zhouyajie.github.io/hanzibrush/support") {
-                        openURL("https://zhouyajie.github.io/hanzibrush/support/")
+                    SettingsLinkRow(systemImage: "questionmark.circle.fill", title: store.text("settings.support"), subtitle: "davidzyj.github.io/hanzibrush/support") {
+                        openURL("https://davidzyj.github.io/hanzibrush/support/")
                     }
 
                     SettingsLinkRow(systemImage: "envelope.fill", title: store.text("settings.email"), subtitle: "jay212315@gmail.com") {
