@@ -8,7 +8,7 @@ final class AppStore: ObservableObject {
     @Published private(set) var practiceRecords: [String: PracticeRecord]
     @Published private(set) var artworks: [Artwork]
     @Published private(set) var streakDayKeys: Set<String>
-    @Published var selectedTab: AppTab = .today
+    @Published var selectedTab: AppTab
     @Published var toastMessage: String?
 
     let characters = SeedData.characters
@@ -34,6 +34,7 @@ final class AppStore: ObservableObject {
             userData = storage.load()
         }
 
+        selectedTab = configuration.initialTab
         selectedLanguage = userData.selectedLanguage
         favoriteIDs = Set(userData.favoriteIDs)
         practiceRecords = userData.practiceRecords
@@ -223,16 +224,30 @@ final class AppStore: ObservableObject {
 
 struct AppLaunchConfiguration {
     let screenshotDemoData: Bool
+    let initialTab: AppTab
 
     static var current: AppLaunchConfiguration {
         #if DEBUG
+        let screenshotDemoData = CommandLine.arguments.contains("--screenshot-demo-data")
         return AppLaunchConfiguration(
-            screenshotDemoData: CommandLine.arguments.contains("--screenshot-demo-data")
+            screenshotDemoData: screenshotDemoData,
+            initialTab: screenshotDemoData ? Self.screenshotTabArgument() : .today
         )
         #else
-        return AppLaunchConfiguration(screenshotDemoData: false)
+        return AppLaunchConfiguration(screenshotDemoData: false, initialTab: .today)
         #endif
     }
+
+    #if DEBUG
+    private static func screenshotTabArgument() -> AppTab {
+        guard let index = CommandLine.arguments.firstIndex(of: "--screenshot-tab"),
+              CommandLine.arguments.indices.contains(index + 1),
+              let tab = AppTab(rawValue: CommandLine.arguments[index + 1]) else {
+            return .today
+        }
+        return tab
+    }
+    #endif
 }
 
 struct LocalStorage {
