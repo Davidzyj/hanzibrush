@@ -38,20 +38,36 @@
 - `scripts/capture_screenshots.sh`：Debug 截图数据启动脚本，截图放最后使用。
 - `scripts/preflight_release_check.sh`：发版前校验脚本。
 - `pages/`：GitHub Pages 静态隐私政策和支持页面。
+- 线上 GitHub Pages：
+  - `https://davidzyj.github.io/hanzibrush/`
+  - `https://davidzyj.github.io/hanzibrush/privacy/`
+  - `https://davidzyj.github.io/hanzibrush/support/`
 - `docs/progress.md`：阶段进度。
 - `docs/ux-design-cn.md`：中文版 UX 方案、路径和验收标准。
 - `mockups/hanzi-brush-ux.html`：HTML/CSS UI 效果图。
-- `docs/app-store-connect-cn-en.md`：App Store Connect 中英文资料。
+- `docs/app-store-connect-cn-en.md`：App Store Connect 英文、简体中文、日文资料。
 - `docs/user-guide.md`：使用文档。
 - `docs/test-cases.md`：测试用例。
 - `docs/release-checklist.md`：发版检查清单。
+- `screenshots/iphone-17-pro-max/en/`：真实 iPhone 17 Pro Max 模拟器英文截图。
+- `build/screenshot-previews/contact-sheet.jpg`：截图预览拼图。
 
 ## 下一位 agent 建议
 
-继续时先运行 Release 构建和发版校验脚本。如果用户要求创建 GitHub 仓库，需要用用户的 GitHub CLI 登录状态或让用户手动创建远程仓库；不要假设已经有权限。不要跳过数据闭环和测试闭环。
+继续时先运行发版前校验脚本。GitHub 仓库和 GitHub Pages 已完成，不需要重复创建。不要跳过数据闭环和测试闭环。
 
 重要验证命令：
 
 - `xcodebuild -project HanziBrush.xcodeproj -scheme HanziBrush -destination 'platform=iOS Simulator,name=iPhone 17,OS=26.2' -derivedDataPath build/DerivedData build`
 - `xcodebuild -project HanziBrush.xcodeproj -scheme HanziBrush -configuration Release -destination 'generic/platform=iOS' -derivedDataPath build/DerivedDataRelease build`
 - `scripts/preflight_release_check.sh`
+
+## 交付状态
+
+- App 主功能已实现并验证。
+- 1024x1024 RGB、无 alpha App 图标已生成。
+- 真实模拟器截图已生成。
+- GitHub 仓库已推送到 `main`。
+- GitHub Pages 隐私政策和支持页面已部署。
+- App Store 文案、使用文档、测试用例、发版清单都已落盘。
+- 还需要用户在 Apple Developer / App Store Connect 后台手动完成 Bundle ID 注册、签名团队、创建 App 记录、定价、上传构建、填写审核信息并提交审核。

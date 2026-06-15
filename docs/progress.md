@@ -41,7 +41,7 @@ Bundle ID：com.zhouyajie.hanzibrush
 
 ## Phase 1 - 原生 iOS App 与资料准备
 
-状态：实现完成，等待 GitHub/Apple 后台手动事项和最终截图
+状态：实现完成，等待 Apple Developer / App Store Connect 后台手动事项
 
 已完成：
 
@@ -62,10 +62,13 @@ Bundle ID：com.zhouyajie.hanzibrush
 - Release 模拟器构建已通过。
 - App 已安装并启动到 iPhone 17 模拟器。
 - `scripts/preflight_release_check.sh` 已通过。
+- GitHub 仓库已推送到 `main`。
+- GitHub Pages 已部署并可访问。
+- 真实 iPhone 17 Pro Max 模拟器截图已生成，路径为 `screenshots/iphone-17-pro-max/en/`。
+- 截图预览拼图已生成，路径为 `build/screenshot-previews/contact-sheet.jpg`。
 
 待验证：
 
 - 真机或模拟器手动走查。
-- 用户确认是否现在创建 GitHub 远程仓库并部署 Pages。
 - Apple Developer 团队签名配置完成后，运行 generic iOS Release/archive。
-- 最后阶段生成 App Store 截图。已生成英语 iPhone 17 Pro Max 截图，路径为 `screenshots/iphone-17-pro-max/en/`，contact sheet 为 `build/screenshot-previews/contact-sheet.jpg`。
+- 在 App Store Connect / Apple Developer 后台完成创建 App、注册 Bundle ID、设置价格、上传构建、填写审核信息并提交审核。
