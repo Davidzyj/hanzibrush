@@ -627,7 +627,7 @@ struct SettingsView: View {
                         openURL("https://davidzyj.github.io/hanzibrush/support/")
                     }
 
-                    SettingsLinkRow(systemImage: "envelope.fill", title: store.text("settings.email"), subtitle: "jay212315@gmail.com") {
+                    SettingsLinkRow(systemImage: "envelope.fill", title: store.text("settings.email"), subtitle: store.text("settings.emailSubtitle")) {
                         openURL("mailto:jay212315@gmail.com?subject=Hanzi%20Brush%20Support")
                     }
 
