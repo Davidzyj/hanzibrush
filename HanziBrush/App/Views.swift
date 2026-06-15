@@ -619,11 +619,11 @@ struct SettingsView: View {
                         }
                     }
 
-                    SettingsLinkRow(systemImage: "lock.shield.fill", title: store.text("settings.privacy"), subtitle: "davidzyj.github.io/hanzibrush/privacy") {
+                    SettingsLinkRow(systemImage: "lock.shield.fill", title: store.text("settings.privacy"), subtitle: store.text("settings.privacySubtitle")) {
                         openURL("https://davidzyj.github.io/hanzibrush/privacy/")
                     }
 
-                    SettingsLinkRow(systemImage: "questionmark.circle.fill", title: store.text("settings.support"), subtitle: "davidzyj.github.io/hanzibrush/support") {
+                    SettingsLinkRow(systemImage: "questionmark.circle.fill", title: store.text("settings.support"), subtitle: store.text("settings.supportSubtitle")) {
                         openURL("https://davidzyj.github.io/hanzibrush/support/")
                     }
 
